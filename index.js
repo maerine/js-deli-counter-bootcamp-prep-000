@@ -1,6 +1,10 @@
+var start = 90;
+
 function takeANumber(line, person) {
-  line.push(person);
-  return `Welcome, ${person}. You are number ${line.length} in line.`;
+  
+  line.push(start++);
+  
+  return `Welcome, ${start}. You are number ${line.length} in line.`;
 }
 
 function nowServing(katzDeliLine) {
@@ -13,6 +17,7 @@ function nowServing(katzDeliLine) {
 }
 
 function currentLine(line) {
+  var array = ["mae", "jc", "bob"];
   var update = "The line is currently: ";
   
   if(line.length === 0) {
